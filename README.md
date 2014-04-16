@@ -1,4 +1,4 @@
-mobile-ycjw
-===========
+Feel free to fork this project.
+New topic branches are always welcome!
+Contact Author: tounaobun@gmail.com
 
-这是一个移动版本的原创教务管理系统，适用于安卓2.1版本以上

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/query_system_listview_grade_result_actual_semesiter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="实际学期"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/query_system_listview_grade_result_property"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="性质"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/query_system_listview_grade_result_course_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="课程名称"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/query_system_listview_grade_result_actual_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="学时"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/query_system_listview_grade_result_actual_credit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="学分"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/query_system_listview_grade_result_grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="right"
+            android:text="成绩"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

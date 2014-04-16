@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:background="@drawable/v5_0_1_flipper_head_blue_background" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="学生密码修改"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/edit_pass_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/selector_btn_back"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="返回"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:padding="15dp"
+        android:layout_height="fill_parent"
+        android:background="@color/bg_color_deep" >
+
+        <EditText
+            android:id="@+id/edit_pass_old_pass"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/edit_pass_username"
+            android:layout_alignRight="@+id/edit_pass_username"
+            android:layout_below="@+id/edit_pass_username"
+            android:background="@drawable/input_style_pass"
+            android:ems="10"
+            android:hint="旧密码"
+            android:inputType="textPassword"
+            android:textSize="16sp" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/edit_pass_new_pass"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/edit_pass_old_pass"
+            android:layout_alignRight="@+id/edit_pass_old_pass"
+            android:layout_below="@+id/edit_pass_old_pass"
+            android:background="@drawable/input_style_pass"
+            android:ems="10"
+            android:hint="新密码"
+            android:inputType="textPassword"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edit_pass_confirm_pass"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/edit_pass_new_pass"
+            android:layout_alignRight="@+id/edit_pass_new_pass"
+            android:layout_below="@+id/edit_pass_new_pass"
+            android:background="@drawable/input_style_reverse"
+            android:ems="10"
+            android:hint="确认密码"
+            android:inputType="textPassword"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/edit_pass_sure"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/edit_pass_confirm_pass"
+            android:layout_alignRight="@+id/edit_pass_confirm_pass"
+            android:layout_below="@+id/edit_pass_confirm_pass"
+            android:layout_marginTop="46dp"
+            android:background="@drawable/pass_modify_confirm_btn"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edit_pass_username"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="66dp"
+            android:background="@drawable/input_style"
+            android:editable="false"
+            android:ems="10" />
+    </RelativeLayout>
+
+</LinearLayout>

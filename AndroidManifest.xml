@@ -1,0 +1,81 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="zjut.soft.finalwork"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".core.YCApplication"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".ui.WelcomeUI"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.EditPassUI"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.SlidingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.StudentGradeQueryUI"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.LevelGradeQueryUI"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.LoginUI"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.GraduationGPAQueryUI"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.BasicInfoUI"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.TestArrangementUI"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.ChooseSemesterUI"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.PersonalDevelopScheduleUI"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.StudentCourseTableQueryUI"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.ChooseSemesterUIForCourseTable"
+            android:screenOrientation="portrait" >
+        </activity>
+    </application>
+
+</manifest>

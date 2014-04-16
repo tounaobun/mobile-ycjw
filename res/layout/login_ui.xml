@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<LinearLayout
+    android:id="@+id/login_ui_rela"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_centerInParent="true"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:orientation="vertical" >
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="140dp" android:layout_marginTop="30dp">
+        <TextView android:id="@+id/login_title_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:layout_marginTop="8dp" android:text="移动原创" android:textColor="#83CCEA" android:textSize="23sp"/>
+        <ImageView android:id="@+id/imageView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@+id/login_title_tv" android:layout_centerHorizontal="true" android:src="@drawable/new_logo"/>
+        <ImageView android:id="@+id/imageView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_alignRight="@+id/imageView1" android:layout_marginBottom="4dp" android:src="@drawable/ic_educationalsystem_icon"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/username_package"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="-0.5sp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/input_style"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_reg_login_mail" />
+
+        <AutoCompleteTextView
+            android:id="@+id/username_et"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="请输入您的学号"
+            android:imeOptions="actionSend|flagNoEnterAction"
+            android:inputType="number"
+            android:textColor="#ff545454"
+            android:textSize="16.0sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/password_package"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="-0.5sp"
+        android:background="@drawable/input_style_pass"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_reg_login_pwd" />
+
+        <EditText
+            android:id="@+id/password_et"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="请输入您的密码"
+            android:imeOptions="actionSend|flagNoEnterAction"
+            android:inputType="textPassword"
+            android:textColor="#ff545454"
+            android:textSize="16.0sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/spinner_package"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/input_style_spinner"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/network" />
+
+        <Spinner
+            android:id="@+id/login_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@color/white" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_btn_click"
+        android:padding="15dp"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>
+</RelativeLayout>

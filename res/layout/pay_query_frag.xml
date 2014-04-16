@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:background="@drawable/v5_0_1_flipper_head_blue_background" >
+
+        <TextView
+            android:id="@+id/pay_query_pay_info_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="缴费查询"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/pay_query_frag_menu"
+            android:layout_width="54dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/v5_0_1_flipper_head_title_wrapper_background"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_title_menu_icon" />
+
+        <ImageView
+            android:id="@+id/pay_query_frag_about_us"
+            android:layout_width="54dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/v5_0_1_flipper_head_title_wrapper_background"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_title_more_icon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bg_color_deep"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/pay_query_frag_pay_info"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="注意：如果你有学费没有缴清，请先去计财处缴费，否则不予选课，不能等级考试报名、课表查询等。"
+            android:textColor="#ff0000"
+            android:textSize="11dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/textView1"
+            android:layout_marginTop="55dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text=" 如果你确认已经缴费，可按 &apos;更新缴费信息&apos;进行数据库更新缴费情况。"
+            android:textColor="#ff0000"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/pay_query_frag_pay_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="46dp"
+            android:text="缴费查询"
+            android:textColor="#ff0000"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/pay_query_frag_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:text="更新缴费信息" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/pay_query_frag_btn"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="更新后系统仍提示&apos;未缴费&apos;，请登陆&apos;财务网上查询&apos;缴费情况。"
+            android:textColor="#ff0000"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView3"
+            android:layout_marginLeft="19dp"
+            android:layout_marginTop="34dp"
+            android:text="相关文件:"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/pay_query_frag_file1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView4"
+            android:layout_below="@+id/textView4"
+            android:layout_marginTop="14dp"
+            android:text="TextView"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/pay_query_frag_file2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/pay_query_frag_file1"
+            android:layout_below="@+id/pay_query_frag_file1"
+            android:layout_marginTop="19dp"
+            android:text="TextView"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+</LinearLayout>
