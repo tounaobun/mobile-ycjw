@@ -175,6 +175,7 @@ public class SlidingActivity extends FragmentActivity implements ItemClickListen
 
 	public void showRight() {
 		mSlidingMenu.showRightView();
+
 	}
 
 	@Override
@@ -213,12 +214,13 @@ public class SlidingActivity extends FragmentActivity implements ItemClickListen
 					@Override
 					public void run() {
 						showRight();
+
 					}
 				}, 500);
 				break;
 			case R.id.sliding_activity_unregister_user:
-				// 注销系统
-				new AlertDialog.Builder(this).setTitle("注销系统").setMessage("您确定要注销吗?")
+				// 注销登录
+				new AlertDialog.Builder(this).setTitle("注销登录").setMessage("您确定要注销吗?")
 				.setPositiveButton("确定", new DialogInterface.OnClickListener() {
 					
 					@Override
@@ -234,6 +236,18 @@ public class SlidingActivity extends FragmentActivity implements ItemClickListen
 				}).setNegativeButton("取消", null)
 				.create().show();
 				break;
+			case R.id.sliding_activity_pick_course_system:
+			case R.id.sliding_activity_regist_system:
+			case R.id.sliding_activity_student_rating:
+				new AlertDialog.Builder(this).setTitle("移动原创提醒您").setMessage("敬请期待...")
+				.setNeutralButton("知道了", new DialogInterface.OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+							// do nothing
+					}
+				}).create().show();
+			break;
 		}
 	}
 

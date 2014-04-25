@@ -21,6 +21,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/head_default"
+                android:background="@drawable/portrait_border"
                 android:layout_marginRight="10dp" />
 
             <TextView
@@ -31,7 +32,7 @@
                 android:layout_marginBottom="1dp"
                 android:layout_toRightOf="@+id/sliding_activity_head_view"
                 android:text="201326910432"
-                android:textColor="@color/black"
+                android:textColor="#666"
                 android:textSize="15sp" />
 
             <TextView
@@ -42,7 +43,7 @@
                 android:layout_below="@+id/sliding_activity_name_tv"
                 android:layout_marginTop="1dp"
                 android:text="加载中..."
-                android:textColor="@color/text_color"
+                android:textColor="#888"
                 android:textSize="10sp" />
 
             <TextView
@@ -52,7 +53,7 @@
                 android:layout_alignLeft="@+id/sliding_activity_username_textview"
                 android:layout_below="@+id/sliding_activity_username_textview"
                 android:text="小三"
-                android:textColor="@color/text_color"
+                android:textColor="#336699"
                 android:textSize="12sp" />
         </RelativeLayout>
 
@@ -99,6 +100,82 @@
             android:layout_height="50dp" >
 
             <TextView
+                android:id="@+id/sliding_activity_pick_course_system"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@android:drawable/list_selector_background"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="选课系统"
+                android:textColor="@color/text_color"
+                android:textSize="15sp" />
+
+            <TextView 
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="待开发"
+                android:textColor="#fff"
+                android:textSize="8sp"
+                android:background="@drawable/to_be_develop_corner"
+                android:layout_marginRight="54dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                />
+        </RelativeLayout>
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            layout="@layout/line" >
+        </include>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" >
+
+            <TextView
+                android:id="@+id/sliding_activity_regist_system"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@android:drawable/list_selector_background"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="报名系统"
+                android:textColor="@color/text_color"
+                android:textSize="15sp" />
+
+            <TextView 
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="待开发"
+                android:textColor="#fff"
+                android:textSize="8sp"
+                android:background="@drawable/to_be_develop_corner"
+                android:layout_marginRight="54dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                />
+        </RelativeLayout>
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            layout="@layout/line" >
+        </include>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" >
+
+            <TextView
                 android:id="@+id/sliding_activity_query_system"
                 android:layout_width="fill_parent"
                 android:layout_height="50dp"
@@ -119,8 +196,45 @@
                 android:layout_marginRight="54dp"
                 android:src="@drawable/ic_note_select_type_right_enter"
                 android:visibility="invisible" />
-        </RelativeLayout>
+        </RelativeLayout>        
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            layout="@layout/line" >
+        </include>
 
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" >
+
+            <TextView
+                android:id="@+id/sliding_activity_student_rating"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@android:drawable/list_selector_background"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="学生评教"
+                android:textColor="@color/text_color"
+                android:textSize="15sp" />
+
+            <TextView 
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="待开发"
+                android:textColor="#fff"
+                android:textSize="8sp"
+                android:background="@drawable/to_be_develop_corner"
+                android:layout_marginRight="54dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                />
+        </RelativeLayout>        
         <include
             android:layout_width="fill_parent"
             android:layout_height="2dp"
@@ -205,7 +319,7 @@
                 android:clickable="true"
                 android:gravity="center_vertical"
                 android:paddingLeft="20dp"
-                android:text="注销系统"
+                android:text="注销登录"
                 android:textColor="@color/text_color"
                 android:textSize="15sp" />
 
@@ -225,6 +339,33 @@
             android:layout_height="2dp"
             layout="@layout/line" >
         </include>
+        
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/wxewm"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/wxewm"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/wxewm"
+                android:text="浙江工业大学教务处微信"
+                android:layout_marginTop="18dp"
+                android:textSize="12sp"
+                android:textColor="#ff0000" />
+
+        </RelativeLayout>
     </LinearLayout>
 
 </ScrollView>

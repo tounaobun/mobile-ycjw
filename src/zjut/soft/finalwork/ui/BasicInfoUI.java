@@ -12,6 +12,10 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.view.animation.Animation;
+import android.view.animation.BounceInterpolator;
+import android.view.animation.OvershootInterpolator;
+import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -52,6 +56,14 @@ public class BasicInfoUI extends Activity {
 		
 		portraitIV.setImageBitmap(portraitBitmap);
 		
+		int[] location = new int[2];
+		portraitIV.getLocationInWindow(location);
+		Animation anim = new TranslateAnimation(0, 0, location[1], location[1] + 30);
+		anim.setInterpolator(new OvershootInterpolator(7.0f));
+		anim.setDuration(800);
+		anim.setFillAfter(true);
+		portraitIV.setAnimation(anim);
+		anim.startNow();
 		String username = (String)app.get("username");
 		if(username != null) {
 			usernameTV.setText(username);

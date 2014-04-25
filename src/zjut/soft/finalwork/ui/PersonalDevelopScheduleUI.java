@@ -6,10 +6,10 @@ package zjut.soft.finalwork.ui;
 
 import zjut.soft.finalwork.R;
 import zjut.soft.finalwork.query.StudentQueryManager;
-import zjut.soft.finalwork.util.Constant;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 import android.view.Window;
 import android.webkit.WebView;
@@ -22,6 +22,7 @@ public class PersonalDevelopScheduleUI extends Activity {
 	private String htmlString;
 	private Handler mHandler;
 	private Button backBtn;
+	private MyHandler mmHandler;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,7 @@ public class PersonalDevelopScheduleUI extends Activity {
 	}
 
 	private void init() {
+		mmHandler = new MyHandler();
 		backBtn = (Button) findViewById(R.id.personal_develop_schedule_ui_back_btn);
 		backBtn.setOnClickListener(new View.OnClickListener() {
 			
@@ -53,8 +55,8 @@ public class PersonalDevelopScheduleUI extends Activity {
 			public void run() {
 				try {
 					htmlString = new StudentQueryManager().getDevelopmentScheduleQuery().getDevelopmentScheduleQueryInfo(PersonalDevelopScheduleUI.this);
+					mmHandler.sendEmptyMessage(0);
 					
-					wv.loadDataWithBaseURL(null, htmlString, "text/html", "utf-8", null);
 				} catch (final Exception e) {
 					e.printStackTrace();
 					mHandler.post(new Runnable() {
@@ -67,5 +69,13 @@ public class PersonalDevelopScheduleUI extends Activity {
 			}
 		}).start();
 		
+	}
+	
+	class MyHandler extends Handler {
+		@Override
+		public void handleMessage(Message msg) {
+			if(msg.what == 0)
+				wv.loadDataWithBaseURL(null, htmlString, "text/html", "utf-8", null);
+		}
 	}
 }

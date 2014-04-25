@@ -32,6 +32,7 @@ import zjut.soft.finalwork.R;
 import zjut.soft.finalwork.core.YCApplication;
 import zjut.soft.finalwork.ui.BasicInfoUI;
 import zjut.soft.finalwork.util.Constant;
+import android.R.raw;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -53,6 +54,11 @@ public class LeftFragment extends Fragment implements View.OnClickListener {
 	private TextView querySystemTV;	// 查询系统
 	private TextView aboutUsTV;	    // 关于我们
 	private TextView unRegisterTV;	// 注销系统
+	
+	// newly added
+	private TextView pickCourseTV;  // 选课系统
+	private TextView RatingTV;      // 学生评教
+	private TextView registTV;		// 报名系统
 	
 	private TextView classNameTV;   // 班级名称
 	private ImageView headTV;
@@ -93,6 +99,10 @@ public class LeftFragment extends Fragment implements View.OnClickListener {
 		payQueryTV.setOnClickListener(this);
 		querySystemTV.setOnClickListener(this);
 		aboutUsTV.setOnClickListener(this);
+		
+		registTV.setOnClickListener(this);
+		pickCourseTV.setOnClickListener(this);
+		RatingTV.setOnClickListener(this);
 	}
 
 	public void setClassName(String name) {
@@ -167,6 +177,10 @@ public class LeftFragment extends Fragment implements View.OnClickListener {
       aboutUsTV = (TextView) view.findViewById(R.id.sliding_activity_about_us);	// 关于我们
       unRegisterTV = (TextView) view.findViewById(R.id.sliding_activity_unregister_user);	// 注销系统
       classNameTV =  (TextView) view.findViewById(R.id.sliding_activity_class_tv);	// 班级名称
+      
+      registTV = (TextView) view.findViewById(R.id.sliding_activity_regist_system); // 报名系统
+      pickCourseTV = (TextView) view.findViewById(R.id.sliding_activity_pick_course_system); // 选课系统
+      RatingTV = (TextView) view.findViewById(R.id.sliding_activity_student_rating);	// 学生评教
 	  return view;
 	}
 
@@ -183,6 +197,9 @@ public class LeftFragment extends Fragment implements View.OnClickListener {
 		case R.id.sliding_activity_query_system:
 		case R.id.sliding_activity_about_us:
 		case R.id.sliding_activity_unregister_user:
+		case R.id.sliding_activity_regist_system:
+		case R.id.sliding_activity_pick_course_system:
+		case R.id.sliding_activity_student_rating:
 			selectedItemWithArrow(v.getId());
 			instance.onItemClick(v.getId());
 			break;
